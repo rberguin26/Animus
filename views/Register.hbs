@@ -1,0 +1,29 @@
+<link rel="stylesheet" type="text/css" href="/CSS/register.css"/>
+
+<div class="form-holder">
+    <form onsubmit="return mySubmitFunction(event)" action="/register" method="POST">
+        <input type="url" name="photo" placeholder="Link Da Sua Foto De Perfil">
+        <input type="text" name="username" placeholder="Nome" required>
+        <input type="tel" name="phone" minlength="9" maxlength="11" size="11" placeholder="Celular com DDD" required>
+        <input type="email" name="email" placeholder="E-mail" required>
+        <input type="password" name="password" minlength="8" placeholder="Senha" required>
+        <nav>
+            <input type="checkbox" name="teacherCheck" id="teacherCheck">
+            <label for="teacherCheck">Você é um professor?</label>
+        </nav>
+
+        <nav class="lists-of-list">
+            <label for="classselector">Escolha no mínimo duas matérias</label>
+            <select name="classselector" class="class-list">
+            </select>
+            <select name="classselector" class="class-list">
+            </select>
+        </nav>
+        
+        <button onclick="submit">Enviar</button>
+    </form>
+</div>
+
+
+
+<script src="/JS/Register.js"></script>

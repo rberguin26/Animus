@@ -1,0 +1,19 @@
+<link rel="stylesheet" type="text/css" href="/CSS/search.css"/>
+
+<div class="search-holder">
+    <div class="main-search-holder">
+        <input type="text" name="mainsearch" id="main-search" placeholder="Pesquisar.">
+        <button id="main-search-button" type="submit">
+            <span onclick='searchQuery(document.querySelector("#main-search").value)' class="material-icons-round search-ico">
+                search
+            </span>
+        </button>
+    </div>
+
+    <div class="loader-holder"><div class="loader"></div></div>
+
+    <div class="result-holder" style="display: none;">
+
+    </div>
+</div>
+<script src="/JS/Search.js"></script>

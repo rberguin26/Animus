@@ -1,0 +1,137 @@
+.search-holder {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.main-search-holder {
+    padding-top: 3rem;
+    padding-bottom: 1.5rem;
+    display: flex;
+}
+
+.result-holder {
+    margin: 0 2rem;
+    width: 30rem;
+    max-width: 30rem;
+    height: 100%;
+}
+
+.result-alert {
+    background-color: var(--first-color);
+    padding: 1rem;
+    border-radius: .75rem;
+    text-align: center;
+    user-select: none;
+}
+
+.result-alert span, .result-alert a {
+    text-decoration-color: red;
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: white;
+    -webkit-text-stroke: .03vw black;
+}
+
+.result-alert a {
+    color: red;
+}
+
+.search-holder #main-search {
+    background-color: var(--first-color);
+}
+
+.result > div {
+    width: 30%;
+}
+
+.result-holder .result-sub {
+    margin-left: 10%;
+}
+
+.result-holder .result-options {
+    margin-left: 10%;
+    font-size: 1.2rem;
+    color: var(--second-bg);
+    font-weight: 800;
+    text-align: right;
+}
+
+.result-holder .result-sub h2 {
+    font-size: 2.5rem;
+}
+
+.result-holder .result-sub p {
+    font-size: 1.5rem;
+}
+
+.result {
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    background-color: var(--first-color);
+    transition: all 200ms ease;
+    text-decoration: none;
+    color: black;
+}
+
+.result:not(:first-child) {
+    margin-top: 2rem;
+}
+
+.result img {
+    background-color: white;
+    border-radius: 50%;
+    width: 7rem;
+}
+
+.result:hover {
+    cursor: pointer;
+    box-shadow: 0 0 1.2vw var(--second-color);
+}
+
+.result:hover img {
+    box-shadow: 0 0 1.2vw var(--second-color);
+}
+
+.loader-holder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    padding: 1.5rem 0;
+    height: inherit;
+    transition: all 200ms ease;
+}
+
+.loader-holder .loader {
+    animation: is-rotating 1s infinite ease;
+    width: 4vw;
+    height: 4vw;
+    border: .45vw solid #e5e5e5;
+    border-radius: 50%;
+    border-top-color: var(--first-color);
+}
+
+@keyframes is-rotating {
+    to {
+        transform: rotateZ(1turn);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .main-search-holder {
+        padding-top: 0;
+    }
+
+    .result-holder {
+        padding: 1rem;
+        width: auto;
+        max-width: none;
+    }
+
+    .search-holder #main-search {
+        width: auto;
+    }
+
+}

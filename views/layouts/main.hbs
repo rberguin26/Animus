@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="/IMG/Logo.png">
+    <link rel="stylesheet" type="text/css" href="/CSS/reset.css"/>
+    <link rel="stylesheet" type="text/css" href="/CSS/main.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    
+    <title>Animus | Tutores Para Todos</title>
+</head>
+<body>
+    <header>
+        <a href="/" class="logo-holder">
+            <img class="logotipo" alt="Logo Do Site Animus" src="/IMG/Logo.png">
+        </a>
+
+        <div class="menu-holder">
+            <ul>
+                <li class="menu-items"><a href="/">Home</a></li>
+                <li class="menu-items"><a href="/class">Matérias</a></li>
+                <li class="menu-items"><a href="#">Aulas</a></li>
+                <li class="menu-items"><a href="#">Avaliações</a></li>
+            </ul>
+        </div>
+
+        <div class="items-holder">
+            <ul>
+                <li>
+                    <span onclick='openAWindow(".menu-acc")' class="material-icons-round main-ico">
+                        account_circle
+                    </span>
+                    <ul class="menu-list menu-acc" style="opacity: 0;display:none;">
+                        <li style="display: none;"><a href="/user">Meu Perfil</a></li>
+                        <li style="display: none;"><a href="#" onclick="exitAcc()">Sair</a></li>
+                        <li style="display: none;"><a href="/register">Cadastro</a></li>
+                        <li style="display: none;"><a href="/login">Login</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <span onclick='openAWindow(".menu-dash")' class="material-icons-round main-ico">
+                        email
+                    </span>
+                    <ul class="menu-list menu-dash" style="opacity: 0;display:none;" blocked="1">
+                        <li><a href="/user">Você recebeu <strong>1</strong> mensagem!</a></li>
+                    </ul>
+                    <span style="position: absolute; user-select:none;" class="material-icons">
+                    circle
+                    </span>
+                </li>
+                <li>
+                    <span onclick='openAWindow(".calendar")' class="material-icons-round main-ico">
+                        event
+                    </span>
+                    <div class="menu-list calendar" style="opacity: 0;display:none;" blocked="1">
+                        <div class="calendar-holder">
+                            <span onclick="verifyForMenu()" class="calendar-exit">X</span>
+                            <table border="0">
+                                <tr ><th colspan="4" class="month-holder">DEZEMBRO</th><th colspan="3">2021</th></tr>
+                                <tr ><th>DOM</th><th>SEG</th><th>TER</th><th>QUA</th><th>QUI</th><th>SEX</th><th>SAB</th></tr>
+                                <tr ><td style="opacity: 0;"></td><td style="opacity: 0;"></td><td style="opacity: 0;"></td><td style="opacity: 0;"></td><td style="opacity: 0;"></td><td style="opacity: 0;"></td><td>1</td></tr>
+                                <tr ><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td></tr>
+                                <tr ><td class="calendar-event">9<div><span>Aula De Matemática </span></div></td><td>10</td><td>11</td><td>12</td><td>13</td><td>14</td><td>15</td></tr>
+                                <tr ><td>16</td><td>17</td><td>18</td><td>19</td><td>20</td><td>21</td><td>22</td></tr>
+                                <tr ><td>23</td><td>24</td><td>25</td><td>26</td><td>27</td><td>28</td><td>29</td></tr>
+                                <tr ><td>30</td><td>31</td><td style="opacity: 0;">  </td><td style="opacity: 0;">  </td><td style="opacity: 0;">   </td><td style="opacity: 0;">  </td style="opacity: 0;"><td style="opacity: 0;">  </td></tr>
+                            </table>
+                        </div>
+                    </div>
+                </li>
+                <li class="search-holder-float">
+                    <input type="text" name="floatbuttonsearch" class="search-input" placeholder="Pesquisar:">
+                    <button type="submit">
+                        <span onclick='redirectQuery(document.querySelector(".search-input").value)' class="material-icons-round search-ico">
+                            search
+                        </span>
+                    </button>
+                </li>
+            </ul>
+
+        </div>
+    </header>
+
+    <div class="container">
+        {{{body}}}
+    </div>
+
+
+
+    <footer>
+        <div class="site-map">
+            <h2>Institucional</h2>
+            <ul>
+                <li><a href="/teacherinst" title="Professores Parceiros"><span>Professores</span></a></li>
+                <li><a href="/inst" title="Como Atuamos"><span>Sobre Nós</span></a></li>
+            </ul>
+        </div>
+        <div class="social-media">
+            <h2>Redes Sociais</h2>
+            <ul>
+                <li><a href="https://www.facebook.com/" target="__blank"><span>Facebook</span><img src="/IMG/Face.png"></a></li>
+                <li><a href="https://www.instagram.com/" target="__blank"><span>Instagram</span><img src="/IMG/Insta.png"></a></li>
+                <li><a href="#"><span>Twitter</span><img src="/IMG/Twt.png"></a></li>
+            </ul>
+        </div>
+    </footer>
+    <div class="chat-holder" style="transform: translateY(80%); display:none;">
+        <div class="tittle-chat-holder">
+            <div class="tittle-chat-sub">
+                <div class="chat-image">
+                    <img src="">
+                </div>
+                <div class="chat-name">
+                    
+                </div>
+            </div>
+            <span class="exit-chat" onclick="openChat(true)">O</span>
+        </div>
+        <div class="chat">
+            <div class="chat-msg">Olá!</div>
+            <div class="chat-msg">Olá!</div>
+        </div>
+        <div class="chat-inputs">
+            <input class="chat-input" type="text" size="18" placeholder="Digite uma mensagem">
+            <button class="send-msg"><img src="/IMG/send.png"></button>
+        </div>
+    </div>
+</body>
+<script src="/JS/Main.js"></script>
+</html>

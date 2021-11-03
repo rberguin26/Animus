@@ -1,0 +1,48 @@
+body {
+    width: 100%;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    max-height: 71%;
+}
+
+.class-container {
+    display: grid;
+    grid-auto-flow: row;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    justify-items: stretch;
+    width: fit-content;
+    height: 71%;
+    max-height: 71%;
+}
+
+.class {
+    text-align: center;
+    margin: 2rem;
+    background-color: var(--first-color);
+    padding: 1.5rem;
+    color: white;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    color: black;
+    text-shadow: 0vw 0vw .1vw black;
+    border-radius: .75rem;
+    transition: box-shadow 200ms ease, opacity 300ms ease;
+}
+
+.class:hover {
+    box-shadow: 0 0 1.2vw var(--second-color);
+}
+
+.class-close {
+    display: none;
+}
+
+.class-open {
+    display: inline-block;
+}

@@ -1,0 +1,172 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.user-holder > nav {
+    transition: opacity 200ms ease-in;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.user-holder .half-block {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.loader-holder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin: 5rem 15rem;
+    height: inherit;
+    transition: all 200ms ease;
+}
+
+.loader-holder .loader {
+    animation: is-rotating 1s infinite ease;
+    width: 4vw;
+    height: 4vw;
+    border: .45vw solid #e5e5e5;
+    border-radius: 50%;
+    border-top-color: var(--first-color);
+}
+
+@keyframes is-rotating {
+    to {
+        transform: rotateZ(1turn);
+    }
+}
+
+.user-holder {
+    background-color: var(--first-color);
+    display: grid;
+    border-radius: .75rem;
+    grid-template-columns: auto auto;
+    padding: 1.5rem;
+}
+
+.user-holder > nav > * {
+    color: white;
+    text-shadow: .1vw .1vw .1vw black;
+    padding: .75rem;
+}
+
+.img-holder {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    max-width: 10vw;
+}
+
+.img-holder img {
+    border-radius: .75rem;
+    max-width: 100%;
+}
+
+.professional-holder {
+    margin-top: .75rem;
+    text-align: center;
+    font-size: 1.25rem;
+}
+
+.avaliação-holder h2 {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.avaliação-holder {
+    margin-left: 4rem;
+}
+
+.avaliação-holder > img {
+    user-select: none;
+    /* font-size: 2rem; */
+    width: 3vw;
+    height: 3vw;
+    padding: .5rem;
+    filter: drop-shadow(0 .25vw .25vw black);
+}
+
+.info-holder {
+    font-size: 1.5rem;
+}
+
+.info-holder a {
+    color: black;
+    text-decoration: underline;
+    text-shadow: 0;
+}
+
+.info-holder > * {
+    margin: .75rem 0;
+}
+
+.info-holder .name {
+    text-transform: capitalize;
+}
+
+.info-holder .email-holder, .cell-holder {
+    font-size: 1.1rem;
+}
+
+.quarter-block {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.quarter-block:last-child {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.class-user-title {
+    font-size: 1.25rem;
+    max-width: 80%;
+}
+
+.class-user{
+    padding-top: 1rem;
+    font-size: 1.5rem;
+}
+
+.chat-button-holder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.chat-button {
+    background: white;
+    padding: 1.5rem;
+    width: fit-content;
+    text-align: center;
+    color: black;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: 900!important;
+    text-shadow: none;
+    border-radius: 0.75rem;
+    cursor: pointer;
+    border: .1vw solid transparent;
+    transition: all 200ms ease;
+    user-select: none;
+}
+
+.chat-button:hover {
+    background-color: transparent;
+    border: .1vw dashed black;
+    color: white;
+    text-shadow: 0px 0px 23px rgba(255, 255, 255, 1);
+}

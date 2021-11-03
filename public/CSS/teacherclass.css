@@ -1,0 +1,119 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.result-container {
+    width: 50%;
+    margin: 1rem 0;
+    overflow: hidden;
+}
+
+.teachers-container {
+    height: 58vh;
+    max-height: 58vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.title-div {
+    background-color: var(--first-color);
+    padding: 2rem;
+    font-size: 2rem;
+    text-align: center;
+    font-weight: 900;
+    color: white;
+    -webkit-text-stroke: .05vw black;
+}
+
+.teachers-container .result-sub {
+    margin-left: 10%;
+}
+
+.teachers-container .result-options {
+    margin-left: 10%;
+    font-size: 1.2rem;
+    color: var(--second-bg);
+    font-weight: 800;
+    text-align: right;
+}
+
+.teachers-container .result-sub h2 {
+    font-size: 2.5rem;
+}
+
+.teachers-container .result-sub p {
+    font-size: 1.5rem;
+}
+
+.result {
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    background-color: var(--first-color);
+    transition: all 200ms ease;
+    text-decoration: none;
+    color: black;
+}
+
+.result:not(:first-child) {
+    margin-top: 2rem;
+}
+
+.result img {
+    background-color: white;
+    border-radius: 50%;
+    width: 7rem;
+}
+
+.result:hover {
+    cursor: pointer;
+    box-shadow: 0 0 1.2vw var(--second-color);
+}
+
+.result:hover img {
+    box-shadow: 0 0 1.2vw var(--second-color);
+}
+
+.loader-holder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    padding: 1.5rem 0;
+    height: inherit;
+    transition: all 200ms ease;
+}
+
+.loader-holder .loader {
+    animation: is-rotating 1s infinite ease;
+    width: 4vw;
+    height: 4vw;
+    border: .45vw solid #e5e5e5;
+    border-radius: 50%;
+    border-top-color: var(--first-color);
+}
+
+@keyframes is-rotating {
+    to {
+        transform: rotateZ(1turn);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .main-search-holder {
+        padding-top: 0;
+    }
+
+    .teachers-container {
+        padding: 1rem;
+        width: auto;
+        max-width: none;
+    }
+
+    .search-holder #main-search {
+        width: auto;
+    }
+
+}

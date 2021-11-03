@@ -1,0 +1,29 @@
+footer {
+    position: relative;
+    max-height: fit-content;
+    height: fit-content;
+    min-height: unset;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.inst-holder {
+    margin: 5rem 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: justify;
+    line-height: 3rem;
+    font-size: 1.75rem;
+    max-width: 45vw;
+}
+
+.inst-holder h2 {
+    margin-bottom: .5rem;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+}

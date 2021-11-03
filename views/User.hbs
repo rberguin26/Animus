@@ -1,0 +1,43 @@
+<link rel="stylesheet" type="text/css" href="/CSS/user.css"/>
+
+{{#if logged}}
+<input id="USER_ID" type="text" style="display: none;" value="{{logged}}">
+{{/if}}
+<div class="user-holder">
+    <div class="loader-holder"><div class="loader"></div></div>
+    <nav style="opacity: 0; display: none;">
+        <div class="half-block">
+            <div class="img-holder">
+                <img>
+                <h2 class="professional-holder"></h2>
+            </div>
+            <div class="avaliação-holder">
+                <div class="chat-button-holder">
+                    <div class="chat-button" onclick="createChat()">
+                      Chat  
+                    </div>
+                </div>
+                <h2>Avaliação</h2>
+                <img src="/IMG/Star.png" decoding="async" width="120" height="120" data-file-width="15" data-file-height="15">
+                <img src="/IMG/Star.png" decoding="async" width="120" height="120" data-file-width="15" data-file-height="15">
+                <img src="/IMG/Star.png" decoding="async" width="120" height="120" data-file-width="15" data-file-height="15">
+                <img src="/IMG/Star.png" decoding="async" width="120" height="120" data-file-width="15" data-file-height="15">
+                <img src="/IMG/Half_Star.png" decoding="async" width="120" height="120" data-file-width="15" data-file-height="15">
+            </div>
+        </div>
+        <div class="half-block"> 
+            <div class="quarter-block">
+                <div class="info-holder">
+                    <h2 class="name"></h2>
+                    <p class="email-holder">Email para contato: <a class="email"></a></p>
+                    <p class="cell-holder">Número para contato: <a target="__blank" class="cell"></a></p>
+                </div>
+            </div>
+            <div class="quarter-block">
+                <span class="class-user-title">As matérias de interesse deste usuário são:</span>
+                <span class="class-user"></span>
+            </div>
+        </div>
+    </nav>
+</div>
+<script src="/JS/User.js"></script>

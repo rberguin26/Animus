@@ -1,0 +1,153 @@
+.banner-holder {
+    display: flex;
+    justify-content: center;
+}
+
+.glider-contain {
+    margin-bottom: 2rem!important;
+}
+
+.container {
+    padding: 2rem 0;
+}
+
+.card-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    width: max-content;
+}
+
+.cards-holder {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.card-plan {
+    border-radius: .75rem;
+    padding: 2rem;
+    margin: 1rem;
+    width: fit-content;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--first-color);
+    cursor: pointer;
+    transition: all 200ms ease 100ms;
+}
+
+.card-plan h1 {
+    color: white;
+    text-shadow: .2vw .2vw .2vw black;
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.card-plan p {
+    display: flex;
+    justify-self: center;
+    max-width: 15vw;
+    height: -webkit-fill-available;
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 2.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.card-plan button {
+    cursor: pointer;
+    background-color: black;
+    text-transform: uppercase;
+    border: none;
+    border: .1vw solid black;
+    text-shadow: .2vw .2vw .2vw black;
+    color: white;
+    font-weight: 600;
+    border-radius: .75rem;
+    padding: 1rem;
+    transition: all 100ms ease;
+}
+
+.card-img-holder {
+    margin-top: -1vw;
+    width: 8vw;
+    height: 8vw;
+    min-height: min-content;
+}
+
+.card-img-holder img {
+    max-width: 100%;
+    max-height: 100%;
+    transition: all 200ms ease-in;
+}
+
+.card-plan:hover {
+    box-shadow: 0 0 1.2vw var(--second-color);
+}
+
+.card-plan:hover button {
+    border: .1vw solid transparent;
+    text-shadow: none;
+    background-color: white;
+    color: black;
+}
+
+.card-plan:hover img {
+    filter: drop-shadow(.25vw .5vw .1vw black);
+}
+
+.teacher-holder {
+    margin-top: 2rem;
+    padding: 0 5rem;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+}
+
+.teacher-holder .teacher-sub {
+    margin-left: 1rem;
+}
+
+.teacher-holder .teacher-sub h2 {
+    text-transform: capitalize;
+    font-size: 2rem;
+}
+
+.teacher-holder .teacher-sub p {
+    font-size: 1.25rem;
+}
+
+.teacher {
+    text-decoration: none;
+    color: black;
+    padding: 1rem;
+    margin: 2.5%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--first-color);
+    transition: all 200ms ease;
+}
+
+.teacher img {
+    background-color: white;
+    border-radius: 50%;
+    width: 7rem;
+}
+
+.teacher:hover {
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 0 1.2vw var(--second-color);
+}
+
+.teacher:hover img {
+    box-shadow: 0 0 1.2vw var(--second-color);
+}

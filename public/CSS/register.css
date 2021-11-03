@@ -1,0 +1,82 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.form-holder form {
+    background-color: var(--first-color);
+    border-radius: .75rem;
+    padding: 1.5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.form-holder form input {
+    background-color: white;
+    border: none;
+    padding: .75rem;
+}
+
+.form-holder form > * {
+    margin: .5rem;
+}
+
+.form-holder form nav {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: 600;
+    color: black;
+    text-decoration: underline;
+}
+
+.form-holder form nav label {
+    margin-left: .5rem;
+}
+
+.form-holder form nav * {
+    cursor: pointer;
+}
+
+.form-holder form > input:first-child {
+    text-align: center;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.form-holder form button {
+    border: none;
+    padding: .5rem;
+    max-width: 60%;
+    cursor: pointer;
+    margin-left: 45%;
+    grid-column-start: 2;
+    grid-row-start: 4;
+    color: black;
+    font-weight: 900;
+    transition: all 200ms ease;
+    background-color: white;
+    border: .2vw solid rgba(0, 0, 0, 0);
+}
+
+.form-holder form button:hover {
+    border-color: hsla(184, 76%, 84%, 1);
+}
+
+.form-holder form .lists-of-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: flex-start;
+}
+
+.class-list {
+    margin: .5rem 0;
+    border: none;
+    padding: .5rem;
+    text-decoration: none;
+    outline: none;
+}

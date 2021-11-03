@@ -1,0 +1,553 @@
+:root {
+ --first-color: rgb(255, 186, 7);
+ --second-color: rgb(247 184 22);
+ --first-bg: rgb(55, 55, 55);
+ --second-bg: rgb(32, 32, 32);
+}
+
+body {
+    height: 100vh;
+    max-height: 100vh;
+    min-height: 100vh;
+    font-family: monospace;
+    background-color: rgb(255, 255, 255);
+}
+
+/* Cabeçalho */
+header {
+    z-index: 1000;
+    background-color: white;
+    min-width: 100%;
+    max-width: 100%;
+    width: 100%;
+    height: fit-content;
+    min-height: 17%;
+    display: flex;
+    justify-content: space-evenly;
+    box-shadow: .1vw -.25vw 1vw rgb(255, 255, 255);
+    transition: box-shadow 200ms ease;
+    position: relative;
+}
+
+header .logo-holder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    padding: .75rem 0;
+}
+
+header .logo-holder img {
+    max-width: 100px;
+    transition: filter 250ms ease;
+}
+
+header .logo-holder:hover img {
+    filter: drop-shadow(.2vw .1vw .1vw black) saturate(2);
+}
+
+header .menu-holder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
+
+header .menu-holder ul {
+    display: flex;
+}
+
+header .menu-items a {
+    font-weight: 700;
+    color: black;
+    font-size: 1.2rem;
+    padding: 1rem 2rem;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    text-shadow: 0vw 0vw .1vw black;
+    transition: all 200ms ease;
+    text-transform: uppercase;
+}
+
+header .menu-holder ul li a:hover {
+    color: rgb(255, 186, 7, .4);
+    text-shadow: 0vw 0vw .1vw rgb(247 184 22);
+    box-shadow: .4vw .4vw .75vw inset rgba(0, 0, 0, 0.418);
+}
+
+header .items-holder, header .items-holder > ul {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+}
+
+header .items-holder > ul > li {
+    padding: 0 .5rem;
+}
+
+header .items-holder .main-ico {
+    color: white;
+    font-size: 2.25rem;
+    -webkit-text-stroke: .08vw var(--first-color);
+    cursor: pointer;
+    user-select: none;
+    transition: all 200ms ease;
+}
+
+header .items-holder .main-ico:hover {
+    transform: scale(1.2);
+    color: var(--first-color);
+    text-shadow: 0 0 .2vw var(--second-color);
+    -webkit-text-stroke: 0 rgb(247 184 22);
+}
+
+/* Main-Menus */
+header .menu-list:not(.calendar) {
+    background-color: white;
+    border: .1vw solid rgb(207, 207, 207);
+    border-radius: .75rem;
+    position: absolute;
+    min-width: fit-content;
+    max-width: fit-content;
+    height: fit-content;
+    transition: all 250ms ease;
+}
+
+header .menu-acc li, header .menu-dash li {
+    padding: .75rem 1rem;
+    font-size: 1rem;
+}
+
+header .menu-acc > li a, header .menu-dash > li a {
+    text-align: center;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    color: black;
+    text-decoration: none;
+}
+
+header .menu-acc > li a:hover, header .menu-dash > li a:hover {
+    color:rgba(0, 0, 0, 0.418);
+}
+
+header .menu-acc > li:not(:last-child, :nth-child(2)) {
+    border-bottom: .1vw solid rgb(207, 207, 207);
+}
+
+.calendar {
+    background-color: transparent;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    transition: 200ms ease-in;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    z-index: 1000;
+}
+
+.calendar .calendar-holder {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    transform: scale(1);
+    background-color: white;
+    border-radius: 1rem;
+    padding: 1.5rem;
+}
+
+.calendar .calendar-exit {
+    width: 90%;
+    margin-top: -2rem;
+    font-size: 2.5rem;
+    color: white;
+    cursor: pointer;
+    -webkit-text-stroke: .1vw black;
+    text-align: right;
+    transition: all 200ms ease;
+}
+
+.calendar .calendar-exit:hover {
+    color: black;
+}
+
+.calendar table {
+    user-select: none;
+    width: 100%;
+    z-index: 2;
+}
+
+.calendar table tr:nth-child(1), .calendar table tr:nth-child(2) {
+    background-color: var(--first-color);
+    color: white;
+    font-weight: 800;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.calendar table tr:nth-child(1) th, .calendar table tr:nth-child(2) th {
+    border: .25vw solid white;
+    text-shadow: .1vw .1vw .1vw black;
+    font-size: 1.75rem;
+}
+
+.calendar table th {
+    font-size: 1.5rem;
+    padding: .5rem;
+}
+
+.calendar table td {
+    background-color: rgba(42, 42, 42, 0.015);
+    color: black;
+    text-align: center;
+    height: 2vw;
+    line-height: 2vw;
+    width: 2vw;
+    font-size: 1.35rem;
+    margin: .5rem;
+    padding: .5rem;
+    font-weight: 800;
+    transition: background-color 200ms ease, transform 200ms ease, color 200ms ease;
+}
+
+.calendar table .calendar-event {
+    color: white;
+    text-shadow: .1vw .1vw .1vw black;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    background-color: salmon;
+}
+
+.calendar table .calendar-event:hover > div {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.calendar table .calendar-event > div {
+    transform: scale(0);
+    opacity: 0;
+    padding: 1rem;
+    background-color: salmon;
+    margin-top: 2rem;
+    position: absolute;
+    transition: all 200ms ease;
+}
+
+.search-holder-float, .search-holder-float > .search {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+.search-holder-float > .search {
+    transition: all 250ms ease;
+    transform-origin:5vh;
+}
+
+.search-holder-float input, .search-holder #main-search {
+    border: none;
+    outline: none;
+    margin-left: 1rem;
+    border-radius: .75rem;
+    background-color: var(--first-color);
+    padding: 1rem;
+    padding-right: 3rem;
+    transition: all 200ms ease;
+    font-size: 1rem;
+}
+
+.search-holder #main-search {
+    margin-left: 2rem;
+}
+
+.search-holder-float button, .search-holder #main-search-button {
+    height: 100%;
+    width: 3rem;
+    margin-left: -3rem;
+    background-color: transparent;
+    border-radius: .75rem;
+    border: none;
+    outline: none;
+    color: black;
+    margin-right: 0rem;
+    padding: .7rem;
+    cursor: pointer;
+}
+
+.search-holder #main-search {
+    width: 25rem;
+}
+
+.search-holder-float button span, .search-holder #main-search-button span {
+    font-size: 2rem;
+    -webkit-text-stroke: .05rem var(--first-color);
+}
+
+.search-holder-float button:hover span, .search-holder #main-search-button:hover span {
+    -webkit-text-stroke: 0 black;
+}
+
+/* Container */
+.container {
+    background-color: var(--first-bg);
+    min-height: 71%;
+}
+
+/* Rodapé */
+footer {
+    z-index: 1000;
+    box-shadow: .1vw .5vw 1vw rgba(0, 0, 0, 1);
+    background-color: var(--second-bg);
+    width: 100%;
+    min-height: 12%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+}
+
+footer > div {
+    width: 50%;
+    padding: 1rem;
+}
+
+footer .site-map {
+    padding-right: 2rem;
+    border-right: .05vw solid var(--first-color);
+    text-align: right;
+}
+
+footer .site-map li:not(:last-child) {
+    margin-right: 2rem;
+}
+
+footer .social-media {
+    padding-left: 2rem;
+    border-left: .05vw solid var(--first-color);
+}
+
+footer > div > h2 {
+    color: rgb(255, 186, 7);
+    text-shadow: .1vw .2vw .1vw black;
+    font-weight: 600;
+    font-size: 1.75rem;
+    margin-bottom: .5rem;
+}
+
+footer div ul {
+    display: inline-flex;
+}
+
+footer div ul li {
+    font-size: 1.25rem;
+    padding: .2rem 0;
+}
+
+footer div ul li a {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+}
+
+footer .social-media a {
+    justify-content: flex-start;
+}
+
+footer .social-media li:not(:first-child) {
+    margin-left: 2rem;
+}
+
+footer div ul li a:hover span:first-child {
+    text-decoration: underline;
+}
+
+footer div ul li a img {
+    transition: all 200ms ease;
+    border-radius: .25rem;
+    margin-left: .5rem;
+    max-width: 80px;
+    width: 1.5rem;
+}
+
+footer div ul li a:hover img {
+    transform: scale(1.5);
+}
+
+.chat-holder {
+    z-index: 1000;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    padding: 1rem;
+    border-radius: .75rem;
+    background-color: white;
+    min-height: 15vh;
+    min-width: 10vw;
+    margin-right: 5rem;
+    box-shadow: 0vw 0vw 1vw rgba(0, 0, 0, 0.212);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    transition: transform 300ms ease-out;
+}
+
+.tittle-chat-holder {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tittle-chat-sub {
+    display: flex;
+    align-items: center;
+}
+
+.tittle-chat-holder .chat-image {
+    width: 1.5vw;
+    height: 1.5vw;
+}
+
+.tittle-chat-holder .chat-image img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.tittle-chat-holder .chat-name {
+    margin-left: .75rem;
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+.chat-inputs {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    align-content: center;
+}
+
+.chat-holder .chat {
+    overflow-y:auto;
+    min-height: 90%;
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding-bottom: 1rem;
+}
+
+.chat-holder .chat .chat-msg {
+    width: fit-content;
+    height: fit-content;
+    font-size: 1rem;
+    color: black;
+    font-weight: 600;
+    padding: .75rem;
+    margin-left: .5rem;
+    border-radius: .75rem 0 .75rem 0;
+    background-color: rgb(182, 241, 245);
+}
+
+.chat-holder .chat .chat-msg:first-child {
+    margin-right: 15em;
+}
+
+.chat-holder .chat .chat-msg:not(:first-child) {
+    background-color: rgba(136, 136, 136, 0.383);
+    margin-top: .25rem;
+    border-radius: 0 .75rem 0 .75rem;
+}
+
+.chat-inputs input {
+    background-color: transparent;
+    padding: 1rem 1rem;
+    min-width: calc(100% - 2rem);
+    border: .1rem solid black;
+}
+
+.chat-inputs button {
+    cursor: pointer;
+    position: absolute;
+    background-color: transparent;
+    border: none;
+    padding: .25rem;
+    margin-right: .5rem;
+}
+
+.chat-inputs button img {
+    width: 20px;
+    height: 20px;
+}
+
+.exit-chat {
+    cursor: pointer;
+    display: flex;
+    justify-content: flex-end;
+    font-size: 2rem;
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 1rem 0;
+    }
+
+    header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    header .menu-holder ul {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    header .menu-holder ul li {
+        margin: .5rem 0;
+    }
+
+    header .items-holder {
+        margin: 1rem 0;
+    }
+    
+    footer div ul {
+        display: list-item;
+    }
+
+    footer .site-map li:not(:last-child){
+        margin-right: 0;
+    }
+
+    footer .social-media li:not(:first-child) {
+        margin-left: 0;
+    }
+
+    footer .site-map {
+        padding-right: .5rem;
+    }
+
+    footer .social-media {
+        padding-left: .5rem;
+    }
+}
