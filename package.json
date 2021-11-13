@@ -18,7 +18,8 @@
     "express": "^4.17.1",
     "express-handlebars": "^5.3.3",
     "mongoose": "^6.0.5",
-    "morgan": "^1.10.0"
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.15"
   },
   "devDependencies": {
     "connect-livereload": "^0.6.1",

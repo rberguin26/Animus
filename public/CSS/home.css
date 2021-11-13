@@ -151,3 +151,21 @@
 .teacher:hover img {
     box-shadow: 0 0 1.2vw var(--second-color);
 }
+  
+.planos{
+    text-decoration: none;
+    color: #fff;
+    transition: all 100ms ease;
+    margin: auto;
+    width: auto;
+}
+
+
+.contratar:hover {
+    color:black;
+}
+
+.planos:hover {
+    color: #000;
+}
+

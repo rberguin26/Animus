@@ -1,6 +1,17 @@
 <link rel="stylesheet" type="text/css" href="/CSS/home.css"/>
 <link rel="stylesheet" type="text/css" href="/CSS/glide.css">
 <link rel="stylesheet" type="text/css" href="/CSS/glider.min.css">
+<link rel="stylesheet" type="text/css" href="/CSS/popups.css">
+
+<script>
+    function abrir(id) {
+      document.getElementById(id).style.display = 'block';
+    }
+
+    function fecha(id) {
+      document.getElementById(id).style.display = 'none';
+    }
+</script>
 
 {{!-- <div class="carousel-container"> --}}
   <div class="glider-contain">
@@ -26,26 +37,53 @@
         <h1 class="tittle">Plano Light</h1>
         <div class="card-img-holder"><img src="/IMG/light.png"></div>
         <p>Faça seus melhores alunos te notarem. Tenha até 2 páginas personalizadas dentro da aba de Matérias. Anúncios Limitados.</p>
-        <button>Contratar</button>
+        <button class="btn-popup"  onclick="abrir('popup-wrapper')">Contratar</button>
       </div>
     </div>
+        <div id="popup-wrapper">
+          <div class="popup">
+            <div class="popup-close" onclick="fecha('popup-wrapper')">x</div>
+            <img src="/IMG/pix.png" alt="" id="pix">
+            <div class="popup-content">
+              <h2 class="pagamentotxt">etapa de pagamento</h2>
+              <p class="pix">O pagamento será reavilzado por meio do PIX, que é um meio de pagamento instantanêo, pode ser acessado por apps como, Mercado Pago, Picpay, Paypal e muitos outros.</p>
+              <img src="/IMG/qrcode.png" alt="" id="qrcode">
+              <img src="/IMG/escaneie.png" alt="" id="escanear">
+              <button class="pague-aqui">pague aqui</button>
+            </div>
+          </div>
+        </div>
     <div class="card-container">
       <div class="card-plan">
         <h1 class="tittle">Plano Free</h1>
         <div class="card-img-holder"><img src="/IMG/free.png"></div>
         <p>Você aparecerá na plataforma. Sem páginas personalizadas dentro da aba Matérias. Sem Anúncios.</p>
-        <button>Contratar</button>
+        <a href="/login"><button class="contratar">contratar</button></a>
       </div>
     </div>
+
     <div class="card-container">
       <div class="card-plan">
         <h1 class="tittle">Plano Pro</h1>
         <div class="card-img-holder"><img src="/IMG/pro.png"></div>
         <p>Presença especial em todo site. Tenha até 5 páginas personalizadas dentro da aba de Matérias. Anúncios Ilimitados.</p>
-        <button>Contratar</button>
+        <button class="btn-popup"  onclick="abrir('popup-wrapper')">Contratar</button>
       </div>
     </div>
 </div>
+    <div id="popup-wrapper">
+          <div class="popup">
+            <div class="popup-close" onclick="fecha('popup-wrapper')">x</div>
+            <img src="/IMG/pix.png" alt="" id="pix">
+            <div class="popup-content">
+              <h2 class="pagamentotxt">etapa de pagamento</h2>
+              <p class="pix">O pagamento será reavilzado por meio do PIX, que é um meio de pagamento instantanêo, pode ser acessado por apps como, Mercado Pago, Picpay, Paypal e muitos outros.</p>
+              <img src="/IMG/qrcode.png" alt="" id="qrcode">
+              <img src="/IMG/escaneie.png" alt="" id="escanear">
+              <button class="pague-aqui">pague aqui</button>
+            </div>
+          </div>
+        </div>
 
 <div class="teacher-holder"></div>
 <script src="/JS/glider.min.js"></script>

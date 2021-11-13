@@ -140,3 +140,10 @@ function verifyForMenu(el) {
         }
     }
 }
+
+var fechar = document.querySelector('div#fechar-chat')
+fechar.addEventListener('click', fecharChat)
+function fecharChat() {
+    console.log('funcionou')
+    document.querySelector(".chat-holder").style.display = "none"
+}
