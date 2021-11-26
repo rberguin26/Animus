@@ -79,3 +79,16 @@ img#escanear {
     background-color: #fdbd18;
 
 }
+
+@media(max-width:999px) {
+    #popup-wrapper {
+        width: 40vh;
+    }
+    .popup-content h2 {
+        font-size: 1.4rem;
+        font-weight: bold;
+    }
+    .pague-aqui {
+        width: 50%;
+    }
+}

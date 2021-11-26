@@ -16,8 +16,7 @@
     flex-direction: column;
     justify-content: center;
     align-content: center;
-    align-items: center;
-    width: max-content;
+    align-items: center
 }
 
 .cards-holder {
@@ -53,7 +52,6 @@
 .card-plan p {
     display: flex;
     justify-self: center;
-    max-width: 15vw;
     height: -webkit-fill-available;
     font-size: 1.5rem;
     font-weight: 600;

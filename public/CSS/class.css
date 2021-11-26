@@ -5,7 +5,7 @@ body {
 .container {
     display: flex;
     justify-content: center;
-    max-height: 71%;
+    overflow: hidden;
 }
 
 .class-container {
@@ -17,7 +17,6 @@ body {
     justify-items: stretch;
     width: fit-content;
     height: 71%;
-    max-height: 71%;
 }
 
 .class {
@@ -33,6 +32,7 @@ body {
     text-shadow: 0vw 0vw .1vw black;
     border-radius: .75rem;
     transition: box-shadow 200ms ease, opacity 300ms ease;
+    text-decoration: none;
 }
 
 .class:hover {
@@ -45,4 +45,11 @@ body {
 
 .class-open {
     display: inline-block;
+}
+
+@media (max-width: 999px) {
+    .class-container {
+        display: flex;
+        flex-direction: column;
+    }
 }

@@ -111,9 +111,27 @@
         width: auto;
         max-width: none;
     }
+    .result {
+        flex-direction: column;
+    }
 
+    .teachers-container .result-sub h2 {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .teachers-container .result-sub p {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    div.title-div {
+        font-size: 20px;
+        padding-left: 0;
+        padding-right: 0;
+        width: 100%;
+    }
     .search-holder #main-search {
         width: auto;
     }
-
 }

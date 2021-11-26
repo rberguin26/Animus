@@ -141,6 +141,7 @@ header .menu-acc > li:not(:last-child, :nth-child(2)) {
     border-bottom: .1vw solid rgb(207, 207, 207);
 }
 
+
 .calendar {
     background-color: transparent;
     position: absolute;
@@ -172,7 +173,7 @@ header .menu-acc > li:not(:last-child, :nth-child(2)) {
 .calendar .calendar-exit {
     width: 90%;
     margin-top: -2rem;
-    font-size: 2.5rem;
+    font-size: 2rem;
     color: white;
     cursor: pointer;
     -webkit-text-stroke: .1vw black;
@@ -186,7 +187,7 @@ header .menu-acc > li:not(:last-child, :nth-child(2)) {
 
 .calendar table {
     user-select: none;
-    width: 100%;
+    width: auto;
     z-index: 2;
 }
 
@@ -421,8 +422,8 @@ footer div ul li a:hover img {
 }
 
 .tittle-chat-holder .chat-image {
-    width: 1.5vw;
-    height: 1.5vw;
+    width: 1.5rem;
+    height: 1.5rem;
 }
 
 .tittle-chat-holder .chat-image img {
@@ -508,33 +509,14 @@ footer div ul li a:hover img {
 @media screen and (max-width: 768px) {
     .container {
         padding: 1rem 0;
-    }
-
-    header {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-    }
-
-    header .menu-holder ul {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    header .menu-holder ul li {
-        margin: .5rem 0;
-    }
-
-    header .items-holder {
-        margin: 1rem 0;
-    }
-    
+    }    
     footer div ul {
         display: list-item;
     }
-
+    .search-holder-float {
+        display: none;
+    }
+    
     footer .site-map li:not(:last-child){
         margin-right: 0;
     }
@@ -553,6 +535,9 @@ footer div ul li a:hover img {
 }
 
 div#fechar-chat  {
+    font-weight: bold;
+    color: red;
     cursor: pointer;
     width: .7rem;
 }
+

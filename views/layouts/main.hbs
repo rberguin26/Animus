@@ -6,6 +6,7 @@
     <link rel="icon" type="image/png" href="/IMG/Logo.png">
     <link rel="stylesheet" type="text/css" href="/CSS/reset.css"/>
     <link rel="stylesheet" type="text/css" href="/CSS/main.css"/>
+    <link rel="stylesheet" type="text/css" href="/CSS/mobile.css"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
@@ -18,9 +19,13 @@
         <a href="/" class="logo-holder">
             <img class="logotipo" alt="Logo Do Site Animus" src="/IMG/Logo.png">
         </a>
-
+        <div class="mobile-menu">
+				<div class="line1"></div>
+				<div class="line2"></div>
+				<div class="line3"></div>
+			</div class="nav-links">
         <div class="menu-holder">
-            <ul>
+            <ul class="nav-list">
                 <li class="menu-items"><a href="/">Home</a></li>
                 <li class="menu-items"><a href="/class">Matérias</a></li>
                 <li class="menu-items"><a href="#">Aulas</a></li>
@@ -53,10 +58,10 @@
                     <span onclick='openAWindow(".calendar")' class="material-icons-round main-ico">
                         event
                     </span>
-                    <div class="menu-list calendar" style="opacity: 0;display:none;" blocked="1">
+                    <div id="calendario" class="menu-list calendar" style="opacity: 0;display:none;" blocked="1">
                         <div class="calendar-holder">
                             <span onclick="verifyForMenu()" class="calendar-exit">X</span>
-                            <table border="0">
+                            <table class="tabela-calendario" border="0">
                                 <tr ><th colspan="4" class="month-holder">DEZEMBRO</th><th colspan="3">2021</th></tr>
                                 <tr ><th>DOM</th><th>SEG</th><th>TER</th><th>QUA</th><th>QUI</th><th>SEX</th><th>SAB</th></tr>
                                 <tr ><td style="opacity: 0;"></td><td style="opacity: 0;"></td><td style="opacity: 0;"></td><td style="opacity: 0;"></td><td style="opacity: 0;"></td><td style="opacity: 0;"></td><td>1</td></tr>
@@ -81,13 +86,9 @@
 
         </div>
     </header>
-
     <div class="container">
         {{{body}}}
     </div>
-
-
-
     <footer>
         <div class="site-map">
             <h2>Institucional</h2>
@@ -129,4 +130,5 @@
     </div>
 </body>
 <script src="/JS/Main.js"></script>
+<script src="/JS/mobile.js"></script>
 </html>
