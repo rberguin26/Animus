@@ -10,7 +10,7 @@
     margin: 8px;
   }
   
-  @media (max-width: 999px) {
+  @media (max-width: 1146px) {
     body {
       overflow-x: hidden;
     }

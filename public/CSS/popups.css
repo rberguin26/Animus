@@ -8,7 +8,7 @@
     width: 60rem;    
     height: 50rem;
     border-radius: 1rem;
-    z-index: 999;
+    z-index: 2000;
     border: 2px solid #fdbd18;
 }
 
@@ -26,7 +26,6 @@
     height: 100%;
     position: relative;
     flex-direction: column;
-
 }
 
 .popup-close {
@@ -82,7 +81,20 @@ img#escanear {
 
 @media(max-width:999px) {
     #popup-wrapper {
-        width: 40vh;
+        width: 20rem;
+        height: 30rem;
+    }
+    img#pix {
+        width: 4rem;
+    }
+    img#qrcode{
+        width: 10rem;
+    }
+    img#escanear {
+        margin-bottom: .5rem;
+    }
+    p.pix {
+        font-size: .9rem;
     }
     .popup-content h2 {
         font-size: 1.4rem;
@@ -90,5 +102,7 @@ img#escanear {
     }
     .pague-aqui {
         width: 50%;
+        height: 2rem;
+        font-size: .7rem;
     }
 }

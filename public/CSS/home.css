@@ -107,6 +107,7 @@
     padding: 0 5rem;
     display: grid;
     grid-template-columns: auto auto auto auto;
+    overflow-y: auto;
 }
 
 .teacher-holder .teacher-sub {
