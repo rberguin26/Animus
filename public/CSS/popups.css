@@ -68,7 +68,7 @@ img#escanear {
     margin-bottom: 2rem;
 }
 
-.pague-aqui {
+.pague-aqui, a.pix-link-button {
     width: 25rem;
     font-size: 30px;
     height: 4rem;
@@ -76,7 +76,7 @@ img#escanear {
     text-transform: uppercase;
     border-radius: 20px;
     background-color: #fdbd18;
-
+    cursor: pointer;
 }
 
 @media(max-width:999px) {
@@ -100,7 +100,7 @@ img#escanear {
         font-size: 1.4rem;
         font-weight: bold;
     }
-    .pague-aqui {
+    .pague-aqui, a.pix-link-button  {
         width: 50%;
         height: 2rem;
         font-size: .7rem;

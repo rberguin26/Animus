@@ -113,7 +113,7 @@
     text-transform: capitalize;
 }
 
-.info-holder .email-holder, .cell-holder {
+.info-holder, .cell-holder {
     font-size: 1.1rem;
 }
 
@@ -183,4 +183,7 @@
     h2.img-holder {
         
     }
+    .email-holder {
+        font-size: .7rem;
+    } 
 }
