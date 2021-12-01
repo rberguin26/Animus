@@ -514,10 +514,25 @@ footer div ul li a:hover img {
     footer div ul {
         display: list-item;
     }
-    .search-holder-float {
-        display: none;
+    .search-input{
+        width: 40%;
     }
     
+    .logotipo {
+        width: 70%;
+    }
+    .search-holder-float button span{
+        width: 2rem;
+    }
+    header .items-holder > ul > li {
+        padding: 0.2vw;
+    }
+    header .items-holder .main-ico {
+        font-size: 2rem;
+    }
+    .search-holder-float input, .search-holder #main-search {
+        margin: 0;
+    }
     footer .site-map li:not(:last-child){
         margin-right: 0;
     }
