@@ -10,23 +10,26 @@ footer {
     justify-content: center;
     align-items: center;
     align-content: center;
+    width: 100%;
 }
 
 .inst-holder {
     color: #fff;
-    margin: 5rem 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: justify;
     line-height: 3rem;
     font-size: 1.75rem;
-    max-width: 45vw;
-}
-.inst-holder p{
-    text-align: center;
+    width: 80%;
 }
 .inst-holder h2 {
     margin-bottom: .5rem;
     text-align: center;
     font-size: 2rem;
     font-weight: 700;
+}
+@media (max-width:475px) {
+    .inst-holder p{
+
+        text-align: center;
+    }
 }

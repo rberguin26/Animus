@@ -15,9 +15,7 @@ exports.registerUser = function (req, res) {
       } else {
       bcrypt.hash(req.body.password, 10)
                 .then(hash => {
-
                   let encryptedPassword = hash;
-
                   let newUser = new modelUser({
                       username: req.body.username,
                       photo: req.body.photo && req.body.photo != '' ? req.body.photo : '/IMG/Img.png',

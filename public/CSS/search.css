@@ -124,10 +124,29 @@
         padding-top: 0;
     }
 
+    .result-holder .result-sub h2 {
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
     .result-holder {
-        padding: 1rem;
+        padding: .2rem;
         width: auto;
         max-width: none;
+    }
+    .result-holder {
+        margin: 0;
+    }
+    .result-holder .result-options {
+        font-size: .7rem;
+        margin: 0;
+        width: 100%;
+        text-align: center;
+    }
+    .result-holder .result-sub p {
+        font-size: 1rem;
+    }
+    .img-holder {
+        width: fit-content;
     }
 
     .search-holder #main-search {
