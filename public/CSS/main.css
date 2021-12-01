@@ -68,6 +68,7 @@ header .menu-items a {
     text-shadow: 0vw 0vw .1vw black;
     transition: all 200ms ease;
     text-transform: uppercase;
+    text-align: center;
 }
 
 header .menu-holder ul li a:hover {
@@ -531,6 +532,10 @@ footer div ul li a:hover img {
 
     footer .social-media {
         padding-left: .5rem;
+    }
+    header .menu-items a  {
+        padding: 1rem .1vw;
+        font-size: 1rem;
     }
 }
 

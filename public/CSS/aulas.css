@@ -1,0 +1,23 @@
+.container {
+    display: flex;
+    justify-content: center;
+}
+.aulas-container {
+    background-color: var(--first-color);
+    width: fit-content;
+    height: fit-content;
+    padding: 2% 10%;
+    margin-top: 2rem;
+    font-size: 6vw;
+    color: #fff;
+}
+.aulas-container{
+    font-family: Helvetica;
+    -webkit-text-stroke:#000 .1vw;
+}
+
+@media (max-width:600px) {
+    .aulas-container{
+        max-width: 100%;
+    }
+}
