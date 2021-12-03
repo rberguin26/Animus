@@ -7,6 +7,7 @@ const
 	cors = require('cors'),
 	exphbs = require('express-handlebars'),
 	mongoose = require('mongoose')
+	usuariosmysql = require('./src/models/registroMYSQL')
 
 mongoose.Promise = global.Promise;
 
@@ -45,6 +46,21 @@ fs.readdirSync('./src/routes/').forEach(file => {
 	app.use(require('./src/routes/'+file))
 })
 
-app.listen(3000, () => {
+//ARMAZENANDO DADOS NO MYSQLQ
+app.post('/register', (req,res)=>{
+	usuariosmysql.create({
+		user: req.body.username,
+		password: req.body.password,
+		email: req.body.email,
+		celular: req.body.phone
+	}).then(function(){
+		res.redirect('login')
+		console.log('conta criada com sucesso')
+	}).catch(function(erro){
+		res.send("houve um erro: "+erro)
+	})
+})
+
+app.listen(80, () => {
 	console.log('Server Rodando Na Porta 3000')
 })

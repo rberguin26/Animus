@@ -32,7 +32,7 @@ function newMsg() {
 
     document.querySelector('.chat-input').value = ''
 }
-
+ 
 
 function openChat(vrf) {
     let chatOptions = JSON.parse(window.localStorage.getItem('actual-chat'))
