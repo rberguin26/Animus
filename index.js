@@ -47,5 +47,5 @@ fs.readdirSync('./src/routes/').forEach(file => {
 
 
 app.listen(80, () => {
-	console.log('Server Rodando Na Porta 3000')
+	console.log('Server Rodando Na Porta 80')
 })
