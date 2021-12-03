@@ -21,7 +21,7 @@ body {
 
 .class {
     text-align: center;
-    margin: 2rem;
+    margin: 2rem .8rem;
     background-color: var(--first-color);
     padding: 1.5rem;
     color: white;
@@ -47,7 +47,7 @@ body {
     display: inline-block;
 }
 
-@media (max-width: 999px) {
+@media (max-width: 1256px) {
     .class-container {
         display: flex;
         flex-direction: column;

@@ -5,8 +5,8 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 60rem;    
-    height: 50rem;
+    width: 50vw;    
+    height: 50vw;
     border-radius: 1rem;
     z-index: 2000;
     border: 2px solid #fdbd18;
@@ -79,7 +79,24 @@ img#escanear {
     cursor: pointer;
 }
 
+#btn-popup {
+    background-color: #fff;
+    transition: all 200ms ease;
+}
+
+#btn-popup:hover {
+    background-color: var(--first-color);
+    border-style: dotted;
+}
+
 @media(max-width:999px) {
+    .chat-button {
+        padding: 1rem;
+        font-size: .7rem;
+    }
+    .user-holder > nav > *  {
+        padding: 0%;
+    }
     #popup-wrapper {
         width: 20rem;
         height: 30rem;

@@ -1,7 +1,5 @@
 let menuOpen = undefined || '.menu-list'
 
-verifyForChat()
-
 if (document.querySelector('#USER_ID')) {
     window.localStorage.setItem('user-id', document.querySelector('#USER_ID').value)
 }
@@ -19,15 +17,6 @@ let items = document.querySelectorAll('.menu-acc > li')
         items[3].removeAttribute('style')
     }
 
-window.document.querySelector('.chat-input').addEventListener('keydown', (event) => {
-    if (event.key == 'Enter') {
-        newMsg()    
-    }
-})
-
-window.document.querySelector('.send-msg').addEventListener('click', () => {
-    newMsg()
-})
 window.addEventListener('click', (event) => {
         if (!document.querySelector(menuOpen).contains(event.target)) verifyForMenu()
 })
@@ -44,23 +33,6 @@ function newMsg() {
     document.querySelector('.chat-input').value = ''
 }
 
-function verifyForChat() {
-    let localString = window.localStorage.getItem('actual-chat')
-    if (localString) {
-        let chatOptions = JSON.parse(localString)
-        document.querySelector('.chat-holder').style.display = ''
-
-        document.querySelector('.chat-image > img').setAttribute('src', chatOptions[0])
-        document.querySelector('.chat-name').innerHTML = chatOptions[1]
-
-        if (chatOptions[2] == 'open') {
-            openChat(false)
-        } else if (chatOptions[2] == 'close') {
-            openChat(true)
-        }
-        
-    }
-}
 
 function openChat(vrf) {
     let chatOptions = JSON.parse(window.localStorage.getItem('actual-chat'))
@@ -142,7 +114,6 @@ function verifyForMenu(el) {
 }
 
 var fechar = document.querySelector('div#fechar-chat')
-fechar.addEventListener('click', fecharChat)
 function fecharChat() {
     console.log('funcionou')
     document.querySelector(".chat-holder").style.display = "none"
