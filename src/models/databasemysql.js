@@ -1,6 +1,6 @@
 //BANCO DE DADOS MYSQL
 const Sequelize = require('sequelize') 
-const sequelize = new Sequelize('cadastro', 'root', 'Akirareidelas123',  {
+const sequelize = new Sequelize('cadastro', 'root', '',  {
     host: "localhost",
     dialect: "mysql"
 })
