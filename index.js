@@ -62,5 +62,5 @@ app.post('/register', (req,res)=>{
 })
 
 app.listen(80, () => {
-	console.log('Server Rodando Na Porta 3000')
+	console.log('Server Rodando Na Porta 80')
 })
